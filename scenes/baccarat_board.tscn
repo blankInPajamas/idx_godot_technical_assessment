@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cyk8x8ytg7evp"]
+
+[ext_resource type="Script" uid="uid://bqvio6dnjqot3" path="res://scripts/board.gd" id="1_fx3uq"]
+
+[node name="BaccaratBoard" type="Control" unique_id=3802268]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fx3uq")
+
+[node name="HTTPPoller" type="Node" parent="." unique_id=1882311680]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="HTTPPoller" unique_id=438602690]
+
+[node name="Timer" type="Timer" parent="HTTPPoller" unique_id=200280311]
+wait_time = 3.0
+
+[node name="BeadRoadGrid" type="Control" parent="." unique_id=1218888896]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BeadRoadGrid" unique_id=1718328031]
+custom_minimum_size = Vector2(800, 650)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="row-container" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer" unique_id=352567102]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="col0" type="HBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container" unique_id=1681106041]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="row0" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col0" unique_id=1220491094]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row1" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col0" unique_id=1972787542]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row2" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col0" unique_id=908870671]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="col1" type="HBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container" unique_id=1345248548]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="row0" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col1" unique_id=392567465]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row1" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col1" unique_id=1603102742]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row2" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col1" unique_id=1238158089]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="col2" type="HBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container" unique_id=1563066508]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="row0" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col2" unique_id=1789680246]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row1" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col2" unique_id=1606605673]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="row2" type="VBoxContainer" parent="BeadRoadGrid/ScrollContainer/row-container/col2" unique_id=821146139]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="." unique_id=383311018]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GameStateManager" type="Node" parent="." unique_id=46766058]
